@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+.task-manager {
+  max-width: 600px;
+  margin: 48px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.page-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.page-header p {
+  margin: 0;
+  color: #666;
+}
+
+.task-input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cfd6dd;
+  border-radius: 8px;
+}
+
+.add-task-button,
+.complete-button,
+.edit-button,
+.delete-button {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.add-task-button,
+.complete-button {
+  background-color: #2f6fed;
+}
+
+.add-task-button:hover,
+.complete-button:hover {
+  background-color: #2459be;
+}
+
+.edit-button {
+  background-color: #f59e0b;
+}
+
+.edit-button:hover {
+  background-color: #d97706;
+}
+
+.edit-button:disabled {
+  background-color: #c9c9c9;
+  cursor: not-allowed;
+}
+
+.delete-button {
+  background-color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #b91c1c;
+}
+
+.task-list-section h2 {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-state {
+  margin: 0;
+  color: #666;
+  text-align: center;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.task-content {
+  flex: 1;
+  word-break: break-word;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-item.completed .task-content {
+  color: #7a7a7a;
+  text-decoration: line-through;
+}
+
+.task-item.completed .complete-button {
+  background-color: #7a7a7a;
+}
+
+@media (max-width: 480px) {
+  .task-manager {
+    margin: 24px 16px;
+    padding: 20px;
+  }
+
+  .task-input-section {
+    flex-direction: column;
+  }
+
+  .add-task-button,
+  .complete-button,
+  .edit-button,
+  .delete-button {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+}
